@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUA HORA VAI CHEGAR!</title>
+    <link rel="stylesheet" href="style.css">
+
+   
+</head>
+
+<body>
+    <header>
+        <P id="titu">SUA HORA VAI CHEGARR SEU VACILaO DE MERDA</P>
+    </header>
+    
+    <main>
+        <p id="demo"></p>
+        <script>
+        var countDownDate = new Date("Nov 21, 2022 15:00:00").getTime();
+        
+        var x = setInterval(function() {
+        
+          var now = new Date().getTime();
+        
+        
+          var distance = countDownDate - now;
+        
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "SEU CU AGORA É MEU, BASTARDO";
+          }
+        }, 1000);
+        </script>
+    </main>
+    <footer>
+        <h3>este site é apenas para uma pegadinha, não precisa se apavorar meu amigo. Nem procurar a Polícia</h3>
+    </footer>
+    
+
+</body>
+</html>
